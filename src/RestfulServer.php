@@ -507,7 +507,7 @@ class RestfulServer extends Controller
             return $this->notFound();
         }
 
-        if (!$obj->canEdit($this->getMember())) {
+        if (!$obj->canEdit(null)) {
             return $this->permissionFailure();
         }
 
